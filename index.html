@@ -70,6 +70,18 @@
                     </div>
                 </div>
                 <div class="promotion">
+                    <h1>Gana Cupones</h1>
+                    <h2>Ofrecemos cupones a las 100
+                        primeras personas que realicen su registro</h2>
+                    <div class="users">
+                        <div class="user">
+                            <div class="img">
+                                <img src="./img/Cupon.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="promotion">
                     <h1>¿Quiénes Somos?</h1>
                     <h2>Este proyecto fue elaborado por tres 
                         estudiantes de la carreda de ingeniera de software</h2>
@@ -166,6 +178,23 @@
     .right{
         align-items: flex-start;
     }
+
+    .left{
+        animation: gameOver 1.5s infinite linear;
+    }
+
+    @keyframes gameOver {
+        0%{
+            transform: scale(0.8);
+        }
+        50%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(0.8);
+        }
+    }
+
 
     .home-text{
         width: 550px;
@@ -316,7 +345,9 @@
         font-size: 1.2rem;
         margin-top: 20px;
         padding: 0.5em 1.5em;
-        background: var(--second);
+        background: var(--primary);
+        color: white;
+        font-weight: bold;
         border-radius: 0.3em;
         border: none;
         outline: none;
@@ -325,13 +356,68 @@
 
     @media (max-width: 1000px) {
         .grid{
-            margin: 0 auto;
             width: 100%;
-            background: rgb(33, 6, 61);
+            grid-auto-rows: 24rem;
+        }
+        .container-home{
+            width: 90%;
+            flex-direction: column;
         }
 
-        .home-principal{
+        .container-home .left{
             display: none;
+        }
+        
+        .container-home .right{
+            width: 90%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .container-home .home-text{
+            width: 100%;
+        }
+
+        .container-home .right h1{
+            font-size: 2.3rem;
+            width: 100%;
+        }
+
+        .container-home .right h2{
+            font-size: 2rem;
+            width: 100%;
+        }
+
+        .container-home .right h3{
+            font-size: 1.6rem;
+            width: 100%;
+        }
+
+        .container-home .right h4{
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .users{
+            width: 100%;
+        }
+
+        .promotion h2{
+            width: 80%;
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 800px){
+
+        .register{
+            width: 80%;
+        }
+
+        .users{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
