@@ -33,16 +33,40 @@
                     <h1>Guias Profesionales</h1>
                     <h2>Tenemos diversas guias de juegos competitivos </h2>
                     <div class="grid">
-                        <div class="component"></div>
-                        <div class="component"></div>
+                        <div class="component">
+                            <img src="./img/dota.jpg">
+                            <div class="info">
+                                <p class="title">Dota 2</p>
+                                <p class="desc">Dota 2 es un juego multi jugador que es entretenido que tiene una comunidad diversa de jugadores</p>
+                            </div>
+                        </div>
+                        <div class="component">
+                            <img src="./img/lol.jpg">
+                            <div class="info">
+                                <p class="title">League Of Legend</p>
+                                <p class="desc">League Of Legend es un juego multi jugador que es entretenido que tiene una comunidad diversa de jugadores</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="promotion">
                     <h1>Jugadores Profesionales</h1>
                     <h2>Contamos con los mejores entrenadores</h2>
                     <div class="grid">
-                        <div class="component"></div>
-                        <div class="component"></div>
+                        <div class="component">
+                            <img src="./img/smash.jpg">
+                            <div class="info">
+                                <p class="title">Smash</p>
+                                <p class="desc">Contamos como profesionales al nivel de el "Proso" o conocido como Smash quien fue un jugador ProPlayer</p>
+                            </div>
+                        </div>
+                        <div class="component">
+                            <img src="./img/Macarius.JPG">
+                            <div class="info">
+                                <p class="title">Macarius</p>
+                                <p class="desc">Macarios un profesional indispensable que te ayudara a que cada partida sea unica y entretenida</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="promotion">
@@ -50,9 +74,24 @@
                     <h2>Este proyecto fue elaborado por tres 
                         estudiantes de la carreda de ingeniera de software</h2>
                     <div class="users">
-                        <div class="user"></div>
-                        <div class="user"></div>
-                        <div class="user"></div>
+                        <div class="user">
+                            <div class="img">
+                                <img src="./img/Luciano.jpg">
+                            </div>
+                            <p class="name">Luciano Lopez</p>
+                        </div>
+                        <div class="user">
+                            <div class="img">
+                                <img src="./img/Diego.png">
+                            </div>
+                            <p class="name">Diego Ludeña</p>
+                        </div>
+                        <div class="user">
+                            <div class="img">
+                                <img src="./img/Rodrigo.png">
+                            </div>
+                            <p class="name">Rodrigo Ticona</p>
+                        </div>
                     </div>
                 </div>
                 <div class="promotion">
@@ -192,16 +231,33 @@
 
     .grid{
         margin: 30px auto;
-        width: 750px;
+        width: 650px;
         display: grid;
         gap: 5rem;
-        grid-auto-rows: 20rem;
-        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+        grid-auto-rows: 24rem;
+        grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     }
     
     .component{
         grid-column: span 2;
-        background: palegoldenrod;
+        font-family: 'Poppins';
+        background: white;
+        color: black;
+    }
+
+    .component .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .component .desc{
+        margin: 0.5em 1.5em;
+        font-size: 1.1rem;
+    }
+
+    .component img{
+        width: 100%;
+        height: 180px;
     }
 
     .users{
@@ -212,10 +268,27 @@
     }
 
     .user{
+        width: 200px;
+        height: 230px;
+    }
+
+    .user .img{
         width: 150px;
         height: 150px;
-        background: rebeccapurple;
+        background: white;
         border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .user .img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .user .name{
+        font-family: 'Poppins';
+        font-size: 1.4rem;
     }
     
     .register{
@@ -235,9 +308,17 @@
         padding: 0.8em 0.6em;
     }
 
+    .register input:focus{
+        outline: none;
+    }
+
     .send{
+        font-size: 1.2rem;
         margin-top: 20px;
-        padding: 0.8em 2.5em;
+        padding: 0.5em 1.5em;
+        background: var(--second);
+        border-radius: 0.3em;
+        border: none;
         outline: none;
         cursor: pointer;
     }
